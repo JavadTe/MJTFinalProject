@@ -22,7 +22,7 @@ if (form) {
         // Standard email pattern
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         // Message: at least 10 characters
-        const messageRegex = /^.{10,}$/s;
+        const messageRegex = /^.{10,}$/;
 
         if (!nameRegex.test(firstName)) {
             document.getElementById('firstNameError').textContent =

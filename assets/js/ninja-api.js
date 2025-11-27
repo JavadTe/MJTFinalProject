@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const responseEl = document.getElementById('response_area');
     const API_Key = 'UGJtbvpg+1Mi+pNMG+B5uQ==UfOJK7Pih9ZmlAln';
 
-    // If the elements are not on this page, do nothing
     if (!check1 || !check2 || !input || !label || !submitBtn || !responseEl) {
         return;
     }
@@ -46,11 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // === PUBLIC HOLIDAYS ===
         if (check1.checked) {
             var country = (input.value || 'AU').trim();
-            var url = 'https://api.api-ninjas.com/v1/publicholidays?country=' +
-                encodeURIComponent(country);
+            var url = 'https://api.api-ninjas.com/v1/publicholidays?country=' + encodeURIComponent(country);
 
             responseEl.textContent = 'Loading all public holidays…';
 
@@ -68,8 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .then(function (data) {
                     if (!Array.isArray(data) || data.length === 0) {
-                        responseEl.textContent =
-                            'No public holidays found for ' + country + '.';
+                        responseEl.textContent = 'No public holidays found for ' + country + '.';
                         return;
                     }
 
@@ -82,24 +78,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         if (Array.isArray(h.regions)) {
                             if (h.regions.length > 0) {
-                                if (
-                                    h.regions.length === 1 &&
-                                    h.regions[0].toLowerCase() === 'all'
-                                ) {
+                                if (h.regions.length === 1 && h.regions[0].toLowerCase() === 'all') {
                                     regionText = 'National';
                                 } else {
                                     regionText = h.regions.join(', ');
                                 }
                             }
                         } else if (typeof h.regions === 'string') {
-                            regionText =
-                                (h.regions.toLowerCase() === 'all')
-                                    ? 'National'
-                                    : h.regions;
+                            regionText = h.regions.toLowerCase() === 'all' ? 'National' : h.regions;
                         }
 
-                        return '<li><strong>' + h.date + '</strong> — ' + h.name +
-                            ' <small>(' + regionText + ')</small></li>';
+                        return '<li><strong>' + h.date + '</strong> — ' + h.name + ' <small>(' + regionText + ')</small></li>';
                     }).join('');
 
                     responseEl.innerHTML =
@@ -108,25 +97,28 @@ document.addEventListener('DOMContentLoaded', function () {
                         '<ul style="margin:.5rem 0 0 1.2rem;">' + items + '</ul>';
                 })
                 .catch(function (err) {
-                    responseEl.textContent =
-                        'Error fetching holidays: ' + err.message;
+                    responseEl.textContent = 'Error fetching holidays: ' + err.message;
                 });
         }
 
-        // === DAD JOKE ===
         if (check2.checked) {
             const joke_number = input.value.trim();
             responseEl.textContent = '';
 
             try {
-                if (joke_number === '') { throw 'empty'; }
-                if (isNaN(joke_number)) { throw 'not a number'; }
+                if (joke_number === '') {
+                    responseEl.innerHTML = '<span style="color:red; font-size:1.3rem;">Input is empty.</span>';
+                    return;
+                }
+
+                if (isNaN(joke_number)) {
+                    responseEl.innerHTML = '<span style="color:red; font-size:1.3rem;">Input is not a number.</span>';
+                    return;
+                }
 
                 const num = Number(joke_number);
 
-                if (num !== 1) {
-                    throw 'You need a premium account for more than one joke';
-                }
+                if (num !== 1) throw 'You need a premium account for more than one joke';
 
                 responseEl.textContent = 'Loading dad joke…';
 
@@ -143,25 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         return res.json();
                     })
                     .then(function (data) {
-                        const joke =
-                            (data && data.length > 0 && data[0].joke)
-                                ? data[0].joke
-                                : 'No joke found — try again!';
-                        responseEl.innerHTML =
-                            '<strong>Dad Joke:</strong> ' + joke;
+                        const joke = (data && data.length > 0 && data[0].joke) ? data[0].joke : 'No joke found — try again!';
+                        responseEl.innerHTML = '<strong>Dad Joke:</strong> ' + joke;
                     })
                     .catch(function (err) {
-                        responseEl.textContent =
-                            'Error fetching joke: ' + err.message;
+                        responseEl.textContent = 'Error fetching joke: ' + err.message;
                     });
             } catch (err) {
-                if (err === 'empty') {
-                    responseEl.textContent = 'Input is empty.';
-                } else if (err === 'not a number') {
-                    responseEl.textContent = 'Input is not a number.';
-                } else {
-                    responseEl.textContent = err;
-                }
+                responseEl.textContent = err;
             }
         }
     });
