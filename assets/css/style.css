@@ -1,0 +1,185 @@
+main .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px;
+    margin: 2rem auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #001F1F;
+}
+
+.home-page h3 {
+    color: #111827;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.home-page a:hover {
+    text-decoration: underline;
+}
+
+nav ul li {
+    background-color: transparent;
+}
+
+.site-img, img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-section {
+    background: #ffffff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    max-width: 600px;
+    margin: 0.5rem auto 1.5rem auto;
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-outline {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+}
+
+.btn-outline:hover {
+    background: #eff6ff;
+}
+
+.home-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+}
+
+.home-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 1024px) {
+
+
+    main .container {
+        max-width: 480px;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        padding: 5rem 1.5rem;
+        text-align: left;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+
+    footer ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer ul a {
+        text-decoration: none;
+        color: #FF7F50;
+    }
+
+    footer ul a:hover {
+        text-decoration: underline;
+    }
+}

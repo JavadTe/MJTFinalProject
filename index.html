@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Javad Tehrani | Web Tech | Cert IV Programming</title>
 
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body class="home-page min-h-dvh bg-gray-50 text-gray-900 flex flex-col">
@@ -25,11 +25,12 @@
         </div>
 
         <nav>
-            <ul class="flex flex-wrap gap-4 text-sm sm:text-base text-gray-400 bg-transparent">
+            <ul class="flex flex-wrap gap-4 text-sm sm:text-base text-gray-400">
                 <li><a href="index.html" class="hover:text-gray-200 hover:underline">Home</a></li>
                 <li><a href="about.html" class="hover:text-gray-200 hover:underline">About</a></li>
                 <li><a href="resume.html" class="hover:text-gray-200 hover:underline">Resume</a></li>
                 <li><a href="projects.html" class="hover:text-gray-200 hover:underline">Projects</a></li>
+                <li><a href="project-sample.html" class="hover:text-gray-200 hover:underline">Project Sample</a></li>
                 <li><a href="contact.html" class="hover:text-gray-200 hover:underline">Contact</a></li>
             </ul>
         </nav>
@@ -38,38 +39,84 @@
 </header>
 
 
-<main class="flex-1 mx-auto max-w-5xl px-4 pt-4 pb-10">
+<main class="flex-1">
 
-    <header>
-        <h2 class="mt-0 text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">
-            Javad Tehrani
+
+    <section class="bg-white py-20 shadow-sm">
+        <div class="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center gap-12">
+
+
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="assets/img/image.jpg"
+                     alt="Profile photo"
+                     class="rounded-2xl shadow-lg w-72 h-72 object-cover" />
+            </div>
+
+
+            <div class="w-full md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Welcome, I'm <span class="text-blue-600">Javad Tehrani</span>
+                </h1>
+
+                <p class="text-lg leading-relaxed text-gray-700">
+                    A passionate IT student at North Metro TAFE, currently studying
+                    Certificate IV in Programming and developing strong skills in web
+                    development, JavaScript, front-end UI, and cybersecurity.
+                    <br><br>
+                    Explore my work, projects, and professional background.
+                </p>
+
+                <div class="mt-8 flex gap-4">
+                    <a href="projects.html"
+                       class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
+                        View My Projects
+                    </a>
+                    <a href="resume.html"
+                       class="px-6 py-3 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition">
+                        My Resume
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-10 text-center">
+            Explore My Portfolio
         </h2>
-    </header>
 
-    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
-        <a href="about.html"
-           class="rounded-2xl border bg-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold">About me</h3>
-        </a>
+            <a href="about.html"
+               class="rounded-2xl border bg-gray-100 p-6 text-center shadow hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold mb-2">About Me</h3>
+                <p class="text-gray-600 text-sm">
+                    Learn more about my background, studies, and skills.
+                </p>
+            </a>
 
-        <a href="projects.html"
-           class="rounded-2xl border bg-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold">Projects</h3>
-        </a>
+            <a href="projects.html"
+               class="rounded-2xl border bg-gray-100 p-6 text-center shadow hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold mb-2">Projects</h3>
+                <p class="text-gray-600 text-sm">
+                    A collection of hands-on coding and web development projects.
+                </p>
+            </a>
 
-        <a href="contact.html"
-           class="rounded-2xl border bg-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold">Contact</h3>
-        </a>
+            <a href="contact.html"
+               class="rounded-2xl border bg-gray-100 p-6 text-center shadow hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold mb-2">Contact</h3>
+                <p class="text-gray-600 text-sm">
+                    Get in touch with me for collaboration or enquiries.
+                </p>
+            </a>
 
+        </div>
     </section>
 
 </main>
-
-
-
-
 
 
 <footer class="border-t bg-black mt-auto">
@@ -81,8 +128,7 @@
         </div>
 
         <ul class="flex gap-4 mt-3 sm:mt-0">
-            <li><a href="https://northmetrotafe.wa.edu.au" class="hover:text-blue-400">North Metro TAFE</a></li>
-            <li><a href="#" class="hover:text-blue-400">ScreenCraft Dev Sites</a></li>
+            <li><a href="#" class="hover:text-blue-400">GitHub</a></li>
             <li><a href="#" class="hover:text-blue-400">Copyright</a></li>
         </ul>
 

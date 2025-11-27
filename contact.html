@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Javad Tehrani | Web Tech | Cert IV Programming</title>
+    <title>Contact | Javad Tehrani | Web Tech | Cert IV Programming</title>
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="home-page min-h-dvh bg-gray-50 text-gray-900 flex flex-col">
@@ -25,11 +26,12 @@
         </div>
 
         <nav>
-            <ul class="flex flex-wrap gap-4 text-sm sm:text-base text-gray-400 bg-transparent">
+            <ul class="flex flex-wrap gap-4 text-sm sm:text-base text-gray-400">
                 <li><a href="index.html" class="hover:text-gray-200 hover:underline">Home</a></li>
                 <li><a href="about.html" class="hover:text-gray-200 hover:underline">About</a></li>
                 <li><a href="resume.html" class="hover:text-gray-200 hover:underline">Resume</a></li>
                 <li><a href="projects.html" class="hover:text-gray-200 hover:underline">Projects</a></li>
+                <li><a href="project-sample.html" class="hover:text-gray-200 hover:underline">Project Sample</a></li>
                 <li><a href="contact.html" class="hover:text-gray-200 hover:underline">Contact</a></li>
             </ul>
         </nav>
@@ -38,8 +40,48 @@
 </header>
 
 
-<main class="flex-1">
+<main class="flex-1 py-24">
 
+    <div class="container" style="max-width: 420px; margin: auto;">
+        <h2 style="text-align:center; margin-bottom:20px;">Contact Us</h2>
+
+
+        <div id="successMessage" class="success"></div>
+
+
+        <form id="contactForm">
+
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" />
+                <div class="error" id="firstNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="familyName">Family Name</label>
+                <input type="text" id="familyName" />
+                <div class="error" id="familyNameError"></div>
+            </div>
+
+
+            <div class="form-group" style="margin-bottom:15px;">
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:15px;">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4"></textarea>
+                <div class="error" id="messageError"></div>
+            </div>
+
+            <button type="submit" style="width:100%; padding:12px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">
+                Send
+            </button>
+
+        </form>
+    </div>
 
 </main>
 
@@ -60,6 +102,9 @@
 
     </div>
 </footer>
+
+
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
