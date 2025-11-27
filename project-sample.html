@@ -2,8 +2,8 @@
 <html lang="en-au">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Sample | Javad Tehrani | Web Tech | Cert IV Programming</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -19,9 +19,9 @@
 
         <div class="flex items-center gap-3">
             <img src="https://placehold.co/64?text=logo" alt="Logo" class="h-12 w-12">
-            <h1 class="text-lg sm:text-xl font-semibold text-gray-300">
-                MJT Final Project<br class="sm:hidden" />
-            </h1>
+            <p class="text-lg sm:text-xl font-semibold text-gray-300">
+                MJT Final Project<br class="sm:hidden">
+            </p>
         </div>
 
         <nav>
@@ -41,9 +41,9 @@
 <main class="flex-1">
 
     <section class="mx-auto max-w-6xl px-4 py-16">
-        <h2 class="mt-0 mb-6 text-center text-5xl md:text-6xl font-light">
+        <h1 class="mt-0 mb-6 text-center text-5xl md:text-6xl font-light">
             Project Sample – API Ninjas Demo
-        </h2>
+        </h1>
 
         <p class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-10">
             This sample shows a working example of my Phase 4 assignment using the
@@ -54,9 +54,8 @@
 
         <div class="grid gap-10 md:grid-cols-2 items-start">
 
-            <!-- Explanation / documentation panel -->
             <div class="bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-200">
-                <h3 class="text-2xl font-semibold mb-4">How this project works</h3>
+                <h2 class="text-2xl font-semibold mb-4">How this project works</h2>
 
                 <p class="mb-4">
                     This page integrates with the
@@ -77,25 +76,22 @@
                     <li>
                         <strong>Dad Joke mode:</strong>
                         calls <code>/v1/dadjokes</code> and displays one random joke.
-                        The form enforces that only <strong>1</strong> joke is allowed
-                        (matching the Phase 4 requirements).
+                        The form enforces that only <strong>1</strong> joke is allowed.
                     </li>
                     <li>
                         <strong>Error handling:</strong>
-                        HTTP errors, empty responses and invalid user input are all
-                        handled and displayed in the result area.
+                        Proper error messages are shown for invalid input or failed API requests.
                     </li>
                 </ul>
 
                 <p class="text-sm text-gray-600">
-                    The behaviour on this page matches the Ninja API form that was
-                    originally implemented and tested in Phase 4 of the portfolio.
+                    The behaviour on this page matches the Ninja API form required in Phase 4.
                 </p>
             </div>
 
-            <!-- Interactive Ninja API form (from Phase 4) -->
+
             <div class="bg-gray-900 text-gray-100 rounded-2xl shadow-lg p-6 md:p-8 border border-blue-500">
-                <h3 class="text-2xl font-semibold mb-4">Try the API Ninjas demo</h3>
+                <h2 class="text-2xl font-semibold mb-4">Try the API Ninjas demo</h2>
 
                 <form class="space-y-4">
                     <div class="flex flex-col gap-2">
@@ -120,14 +116,12 @@
                         </label>
                         <input
                                 id="text_1"
-                                name="text_1"
                                 class="text-sm px-3 py-2 rounded-lg border border-gray-700 bg-gray-800 text-gray-100
                                    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                placeholder=""
                         >
                         <p class="text-xs text-gray-400">
-                            Public Holiday: enter a country code (e.g. <code>AU</code>, <code>US</code>).<br>
-                            Dad Jokes: enter <code>1</code> to request a single joke.
+                            Public Holiday: enter a country code (e.g. AU, US).<br>
+                            Dad Jokes: enter <code>1</code> for one joke.
                         </p>
                     </div>
 
@@ -143,18 +137,15 @@
                     </button>
                 </form>
 
-                <div
-                        id="response_area"
-                        class="mt-6 text-sm leading-relaxed bg-gray-800/70 rounded-lg p-4 min-h-[4rem]"
-                >
-                    <!-- API results will appear here -->
+                <div id="response_area"
+                     class="mt-6 text-sm leading-relaxed bg-gray-800/70 rounded-lg p-4 min-h-[4rem]">
                 </div>
             </div>
+
         </div>
     </section>
 
 </main>
-
 
 <footer class="border-t bg-black mt-auto">
     <div class="mx-auto max-w-7xl px-4 py-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-300">
